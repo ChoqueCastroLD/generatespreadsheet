@@ -1,4 +1,4 @@
-const generateXlsx = require('./generateXlsx');
+const generateXlsx = require('./generators/xlsx');
 /**
  * 
  * Usage example:
