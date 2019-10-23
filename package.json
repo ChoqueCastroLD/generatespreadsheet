@@ -1,7 +1,7 @@
 {
   "name": "generatespreadsheet",
-  "version": "1.0.4",
-  "description": "A Nodejs module that'll help you generate xlsx files from your javascript app",
+  "version": "1.1.4",
+  "description": "A Nodejs module that'll help you generate xls, csv files from your javascript app",
   "main": "src/index.js",
   "scripts": {},
   "repository": {

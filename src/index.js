@@ -31,9 +31,9 @@ function generate(headers = [], items = []){
     let tempFilename = hash + '.xlsx';
 
     return {
-        xlsx:   ()=>generateXlsx(headers, items, tempFilename)
-        //xls:    ()=>generateXls(headers, items, tempFilename),
-        //csv:    ()=>generateCsv(headers, items, tempFilename)
+        xlsx:   ()=>generateXlsx(headers, items, tempFilename),
+        xls:    ()=>generateXls(headers, items, tempFilename),
+        csv:    ()=>generateCsv(headers, items, tempFilename)
     }
 }
 
