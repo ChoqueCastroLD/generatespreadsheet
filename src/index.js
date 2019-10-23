@@ -1,4 +1,6 @@
 const generateXlsx = require('./generators/xlsx');
+const generateXls = require('./generators/xls');
+const generateCsv = require('./generators/csv');
 /**
  * 
  * Usage example:
