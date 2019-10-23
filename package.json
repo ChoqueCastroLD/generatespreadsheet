@@ -1,7 +1,7 @@
 {
   "name": "generatespreadsheet",
-  "version": "1.1.4",
-  "description": "A Nodejs module that'll help you generate xls, csv files from your javascript app",
+  "version": "1.2.5",
+  "description": "A Nodejs module that'll help you generate xlsx, xls and csv files from your javascript app",
   "main": "src/index.js",
   "scripts": {},
   "repository": {
@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/ChoqueCastroLD/generatespreadsheet#readme",
   "dependencies": {
+    "to-excel": "^2.1.1",
     "xls-write": "^1.0.7"
   }
 }

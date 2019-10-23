@@ -14,6 +14,7 @@ function generateCsv(headers = [], rows = [], tempFilename = '') {
                     output += temp.join(', ') + '\n';
             })
 
+            fs.writeFileSync(tempFilename, output);
             let buffer = fs.readFileSync(filepath);
             fs.rmdirSync(filepath, {recursive: true}); 
             resolve(buffer);
