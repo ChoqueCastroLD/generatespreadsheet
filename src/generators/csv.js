@@ -1,9 +1,11 @@
 const path = require('path');
 const fs = require('fs');
 
-function generateCsv(headers = [], rows = [], tempFilename = '') {
+function generateCsv(headers = [], rows = []) {
     return new Promise(async (resolve, reject) => {
         try { 
+            let tempFilename = (Date.now() + '_' + ((Math.random()*100).toString())).substring(0,20)+'.csv';
+
             let filepath = path.join(__dirname, tempFilename);
             
             let output = headers.join(', ') + '\n';

@@ -3,9 +3,11 @@ const toExcel = require('to-excel').toExcel;
 const path = require('path');
 const fs = require('fs');
 
-function generateXls(headers = [], rows = [], tempFilename = '') {
+function generateXls(headers = [], rows = []) {
     return new Promise(async (resolve, reject) => {
         try {
+            let tempFilename = (Date.now() + '_' + ((Math.random()*100).toString())).substring(0,20)+'.xls';
+
             let filepath = path.join(__dirname, tempFilename);
 
             let rawHeaders = headers;

@@ -7,8 +7,9 @@ const fs = require('fs');
  * @param {Array<string>} headers
  * @param {Array<object>} items
  */
-function generateXlsx(headers = [], rows = [], tempFilename = '') {
+function generateXlsx(headers = [], rows = []) {
     return new Promise(async (resolve, reject) => {
+        let tempFilename = (Date.now() + '_' + ((Math.random()*100).toString())).substring(0,20)+'.xlsx';
         
         let filepath = path.join(__dirname, tempFilename);
         
