@@ -17,7 +17,7 @@ function generateXls(headers = [], rows = []) {
 
             let content = toExcel.exportXLS(headers, rows, tempFilename);
 
-            fs.writeFileSync(tempFilename, content);
+            fs.writeFileSync(filepath, content);
             let buffer = fs.readFileSync(filepath);
             fs.rmdirSync(filepath, {
                 recursive: true
