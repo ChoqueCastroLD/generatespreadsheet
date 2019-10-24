@@ -1,6 +1,6 @@
 {
   "name": "generatespreadsheet",
-  "version": "1.2.9",
+  "version": "1.3.0",
   "description": "A Nodejs module that'll help you generate xlsx, xls and csv files from your javascript app",
   "main": "src/index.js",
   "scripts": {},
@@ -10,7 +10,7 @@
   },
   "keywords": [],
   "author": "ChoqueCastroLD",
-  "license": "ISC",
+  "license": "GNU V3",
   "bugs": {
     "url": "https://github.com/ChoqueCastroLD/generatespreadsheet/issues"
   },
