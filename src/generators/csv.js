@@ -18,7 +18,12 @@ function generateCsv(headers = [], rows = []) {
 
             fs.writeFileSync(filepath, output);
             let buffer = fs.readFileSync(filepath);
-            fs.rmdirSync(filepath, {recursive: true}); 
+            try {
+                fs.rmdirSync(filepath, {recursive: true});
+            } catch (error) {}
+            try {
+                fs.unlinkSync(filepath, {recursive:true});
+            } catch (error) {}
             resolve(buffer);
         } catch (error) {
             reject(error);

@@ -37,7 +37,12 @@ function generateXlsx(headers = [], rows = []) {
             else {
                 try {
                     let buffer = fs.readFileSync(filepath);
-                    fs.rmdirSync(filepath, {recursive: true});  
+                    try {
+                        fs.rmdirSync(filepath, {recursive: true});
+                    } catch (error) {}
+                    try {
+                        fs.unlinkSync(filepath, {recursive:true});
+                    } catch (error) {} 
                     resolve(buffer);
                 } catch (error) {
                     reject(err);

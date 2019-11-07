@@ -19,9 +19,12 @@ function generateXls(headers = [], rows = []) {
 
             fs.writeFileSync(filepath, content);
             let buffer = fs.readFileSync(filepath);
-            fs.rmdirSync(filepath, {
-                recursive: true
-            });
+            try {
+                fs.rmdirSync(filepath, {recursive: true});
+            } catch (error) {}
+            try {
+                fs.unlinkSync(filepath, {recursive:true});
+            } catch (error) {}
             resolve(buffer);
         } catch (error) {
             reject(error);
